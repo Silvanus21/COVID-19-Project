@@ -211,4 +211,12 @@ h2 span {
     font-size: 13px;
   }
 }
-
+th{
+  padding: 25px;
+}
+td {
+  font-size: 20px;
+}
+p{
+ font-size: 25px; 
+}
