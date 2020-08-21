@@ -2,33 +2,107 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home Page</title>
+    <!-- bootstrap & fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <!-- scroll reveal -->
+    <script src="https://unpkg.com/scrollreveal"></script>
     <!-- Custom css Link -->
-    <link rel="stylesheet" href="./css/starting.css">
-    <link rel="stylesheet" href="./css/homePage.css">
+    <link rel="stylesheet" href="./css/starting.css" />
+    <link rel="stylesheet" href="./css/homePage.css" />
 </head>
 
 <body>
-
     <div class="box-container">
         <div class="video-container">
             <video id="video" src="./videos/virus.mp4" loop muted autoplay></video>
         </div>
         <div class="content">
             <h1>COVID'19 Live Tracker</h1>
-            <p>A Covid'19 stats tracker for displaying live updates. </p>
+            <p>A Covid'19 stats tracker for displaying live updates.</p>
             <form action="#">
-                <input type="text" class="search" name="search" autocomplete="off" placeholder="Search for country">
+                <div class="form-inputs-container">
+                    <input type="text" class="search" name="search" autocomplete="off"
+                        placeholder="Search for country" />
+                    <input type="submit" value="Find" class="form-btn" />
+                </div>
                 <!-- countries List -->
                 <p class="select-text">Or select a country</p>
                 <div w3-include-html="countriesList.html" class="select-container"></div>
             </form>
         </div>
-
     </div>
 
+    <div class="home-content">
+        <div class="home-page-box">
+            <h2>Total Coronavirus cases</h2>
+            <p>22,718,030</p>
+        </div>
+        <div class="home-page-box">
+            <h2>Recovered</h2>
+            <p>15,405,274</p>
+        </div>
+        <div class="home-page-box">
+            <h2>Total Cases in India</h2>
+            <p>2,900,967</p>
+        </div>
+    </div>
+
+    <div class="images-section">
+        <div class="images-container">
+            <div class="img">
+                <img src="./images/covid1.webp" alt="covid-images" />
+            </div>
+            <div class="img hidden">
+                <img src="./images/covid11.webp" alt="covid-images" />
+            </div>
+            <div class="vertical img">
+                <img src="./images/covid10.webp" alt="covid-images" />
+            </div>
+            <div class="vertical img hidden">
+                <img src="./images/covid2.webp" alt="covid-images" />
+            </div>
+            <div class="vertical img">
+                <img src="./images/covid3.webp" alt="covid-images" />
+            </div>
+            <div class="vertical img">
+                <img src="./images/covid5.webp" alt="covid-images" />
+            </div>
+            <div class="big img">
+                <img src="./images/covid6.webp" alt="covid-images" />
+            </div>
+            <div class="vertical img">
+                <img src="./images/covid7.webp" alt="covid-images" />
+            </div>
+            <div class="vertical img">
+                <img src="./images/covid8.webp" alt="covid-images" />
+            </div>
+            <div class="vertical img">
+                <img src="./images/covid4.webp" alt="covid-images" />
+            </div>
+            <div class="img hidden">
+                <img src="./images/covid9.webp" alt="covid-images" />
+            </div>
+        </div>
+        <a href="#" class="images-btn"> Load more Photos </a>
+    </div>
+
+    <footer class="footer">
+        <div class="copyright">
+            <p>© 2020 All Rights Reserved</p>
+        </div>
+        <div class="icon-container">
+            <i class="fa fa-github" style="font-size: 36px;"></i>
+        </div>
+        <div class="tags" id="symbl">
+            <a href="">Home</a>
+            <a href="">About</a>
+            <a href="">Photos</a>
+            <a href="">Contact</a>
+        </div>
+    </footer>
 
     <script>
         function includeHTML() {
@@ -44,13 +118,17 @@
                     xhttp = new XMLHttpRequest();
                     xhttp.onreadystatechange = function () {
                         if (this.readyState == 4) {
-                            if (this.status == 200) { elmnt.innerHTML = this.responseText; }
-                            if (this.status == 404) { elmnt.innerHTML = "Page not found."; }
+                            if (this.status == 200) {
+                                elmnt.innerHTML = this.responseText;
+                            }
+                            if (this.status == 404) {
+                                elmnt.innerHTML = "Page not found.";
+                            }
                             /* Remove the attribute, and call this function once more: */
                             elmnt.removeAttribute("w3-include-html");
                             includeHTML();
                         }
-                    }
+                    };
                     xhttp.open("GET", file, true);
                     xhttp.send();
                     /* Exit the function: */
