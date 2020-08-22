@@ -15,7 +15,7 @@
 </head>
 
 <body>
-    <div class="box-container">
+    <div class="box-container" id="HOME">
         <div class="video-container">
             <video id="video" src="./videos/virus.mp4" loop muted autoplay></video>
         </div>
@@ -52,16 +52,16 @@
 
     <div class="images-section">
         <div class="images-container">
+            <div class="img" id="hidden">
+                <img src="./images/covid11.webp" alt="covid-images" />
+            </div>
             <div class="img">
                 <img src="./images/covid1.webp" alt="covid-images" />
-            </div>
-            <div class="img hidden">
-                <img src="./images/covid11.webp" alt="covid-images" />
             </div>
             <div class="vertical img">
                 <img src="./images/covid10.webp" alt="covid-images" />
             </div>
-            <div class="vertical img hidden">
+            <div class="vertical img">
                 <img src="./images/covid2.webp" alt="covid-images" />
             </div>
             <div class="vertical img">
@@ -82,7 +82,7 @@
             <div class="vertical img">
                 <img src="./images/covid4.webp" alt="covid-images" />
             </div>
-            <div class="img hidden">
+            <div class="img" id="hidden">
                 <img src="./images/covid9.webp" alt="covid-images" />
             </div>
         </div>
@@ -97,7 +97,7 @@
             <i class="fa fa-github" style="font-size: 36px;"></i>
         </div>
         <div class="tags" id="symbl">
-            <a href="">Home</a>
+            <a href="#HOME">Home</a>
             <a href="">About</a>
             <a href="">Photos</a>
             <a href="">Contact</a>

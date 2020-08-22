@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
 
 * {
   box-sizing: border-box;
@@ -126,24 +127,26 @@ form {
 }
 
 form .form-btn {
+  letter-spacing: 1px;
   position: absolute;
   border: 0;
   border-radius: 50px;
   font-size: 16px;
-  color: #fff;
-  background-color: rgba(0, 0, 0, 0.4);
+  color: #222;
+  background-color: rgb(122, 120, 120);
   transition: background;
   transition-duration: 0.5s;
   top: 3px;
   right: 3px;
-  padding: 10px 25px;
+  padding: 10px 23px;
   outline: none;
 }
 
 form .form-btn:hover {
-  color: #222;
+  letter-spacing: 0px;
+  color: #000;
   font-weight: 600;
-  background: rgba(219, 217, 217, 0.418);
+  background: rgba(138, 136, 136, 0.534);
   cursor: pointer;
 }
 
@@ -237,29 +240,39 @@ select::-webkit-scrollbar {
 }
 
 .home-page-box {
-  background-color: #dbdada;
+  font-family: "open sans", sans-serif;
   text-align: center;
   height: auto;
   min-width: 300px;
   margin: 20px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  display: block;
+  top: 0px;
+  position: relative;
+  background-color: #cfd4d4;
+  border-radius: 4px;
+  transition: all 0.3s ease;
 }
 
 .home-page-box h2 {
-  letter-spacing: 1px;
-  background: #b9b7b7;
+  font-weight: 300;
+  background: #acacac;
   margin: 0 0 20px;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
   padding: 10px 15px;
 }
 
 .home-page-box p {
-  font-size: 22px;
+  letter-spacing: 1px;
+  font-size: 28px;
   margin-bottom: 20px;
   font-weight: 500;
 }
 
-.home-page-box:nth-child(2) p {
-  color: #8aca2b;
+.home-page-box:hover {
+  box-shadow: 0px 4px 8px rgba(38, 38, 38, 0.2);
+  top: -4px;
+  background-color: rgb(235, 235, 235);
 }
 
 /* image section style.... */
@@ -276,7 +289,7 @@ select::-webkit-scrollbar {
 }
 
 .images-container {
-  padding: 50px 60px;
+  padding: 50px 30px;
   border-radius: 10px;
   background: rgba(0, 0, 0, 0.2);
   grid-gap: 15px;
@@ -332,7 +345,7 @@ select::-webkit-scrollbar {
 /* about section styles */
 
 footer {
-  background-color: #2e2e32;
+  background-color: #111;
   padding: 25px;
   display: flex;
   justify-content: space-around;
@@ -392,18 +405,38 @@ footer a:hover {
 
 /************************* media queries *********************************/
 
-@media screen and (max-width: 1050px) {
+@media screen and (max-width: 1290px) {
+  .images-container {
+    width: 95%;
+  }
+}
+
+@media screen and (max-width: 1140px) {
   .images-container {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-auto-rows: 208px;
   }
 }
 
-@media screen and (max-width: 820px) {
+@media screen and (max-width: 980px) {
+  .images-container {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-auto-rows: 183px;
+    padding: 50px 25px;
+  }
+}
+
+@media screen and (max-width: 850px) {
   .images-container {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     grid-auto-rows: 167px;
-    padding: 50px 25px;
+  }
+}
+
+@media screen and (max-width: 790px) {
+  .images-container {
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    grid-auto-rows: 130px;
   }
 }
 
@@ -420,10 +453,13 @@ footer a:hover {
 @media screen and (max-width: 685px) {
   .images-container {
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    flex-direction: column;
+    grid-gap: 0;
   }
-  .hidden {
+  .images-container img {
+    margin: 6px 0;
+  }
+  #hidden {
     height: 0;
   }
   footer {
@@ -433,11 +469,14 @@ footer a:hover {
 }
 
 @media screen and (max-width: 550px) {
+  .images-container {
+    padding: 40px 15px;
+  }
   .home-page-box h2 {
     font-size: 20px;
   }
   .home-page-box p {
-    font-size: 18px;
+    font-size: 24px;
   }
   .form-inputs-container {
     margin: auto;
@@ -457,7 +496,16 @@ footer a:hover {
   .search {
     font-size: 15px;
   }
+  form .form-btn {
+    font-size: 12px;
+  }
   .select {
     width: 220px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .images-container {
+    padding: 35px 10px;
   }
 }
