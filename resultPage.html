@@ -1,140 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CSS grid</title>
     <!-- font awesome css cdn link -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css" integrity="sha256-46r060N2LrChLLb5zowXQ72/iKKNiw/lAmygmHExk/o=" crossorigin="anonymous" />
-    <!-- animate on scroll link -->
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css"
+      integrity="sha256-46r060N2LrChLLb5zowXQ72/iKKNiw/lAmygmHExk/o="
+      crossorigin="anonymous"
+    />
     <!-- custom css link -->
-    <link rel="stylesheet" href="./css/resultPage.css">
-</head>
+    <link rel="stylesheet" href="./css/resultPage.css" />
+  </head>
 
-<body>
-
+  <body>
     <div class="grid-container">
-        <div 
-        data-aos="zoom-in" 
-        data-aos-duration="2000" 
-        data-aos-mirror="true" 
-        class="bg1 block-1">
-            <h2>Coronavirus<span>  Cases:</span></h2>
-            <p>22,418,431</p>
+      <div class="bg1 block-1">
+        <h1>Global</h1>
+        <div class="info">
+          <h1>23,382,946 | <span>15,909,731</span></h1>
+          <p>Coronavirus Cases &nbsp;<span>| &nbsp;Recovered</span></p>
         </div>
-        <div 
-        data-aos="slide-left" 
-        data-aos-duration="2000" 
-        data-aos-mirror="true" 
-        class="bg1 block-2">
-            <h2>Deaths:</h2>
-            <p>786,682</p>
+      </div>
+      <div class="bg1 block-2">
+        <div class="info">
+          <h1>808,717</h1>
+          <p>Total Deaths</p>
         </div>
-        <div 
-        data-aos="slide-left" 
-        data-aos-duration="2000" 
-        data-aos-mirror="true" 
-        class="bg2 block-3">
-            <h2>Recovered:</h2>
-            <p>15,134,091</p>
+      </div>
+      <div class="bg1 block-3">
+        <div class="info">
+          <h1><i class="fas fa-table"></i></h1>
+          <p>Countries Overview</p>
         </div>
-        <div 
-        data-aos="slide-down" 
-        data-aos-duration="2000" 
-        data-aos-mirror="true" 
-        class="bg1 block-4">
-            <h2>Fatality Rate</h2>
-            <p></p>
+      </div>
+      <div class="bg2 block-4">
+        <div>
+          <h2>India Overview</h2>
+          <div class="country-overview">
+            <div class="confirmed overview-box">
+              <p>3,049,855</p>
+              <h3>Confirmed</h3>
+            </div>
+            <div class="recovered overview-box">
+              <p>2,281,982</p>
+              <h3>Recovered</h3>
+            </div>
+            <div class="deaths overview-box">
+              <p>56,875</p>
+              <h3>Deaths</h3>
+            </div>
+          </div>
+          <div class="new-info">
+            <h4 class="new-cases"><span>+6,419</span> &nbsp;new cases</h4>
+            <h4 class="new-recover"><span>+2,010</span> &nbsp;new recover</h4>
+            <h4 class="new-deaths"><span>+350 </span> &nbsp;new deaths</h4>
+          </div>
         </div>
-        <div 
-        data-aos="slide-up" 
-        data-aos-duration="1000" 
-        data-aos-mirror="true" 
-        class="bg1 block-5">
-            <h2>Recovery Rate</h2>
-            <p></p>
+      </div>
+      <div class="bg2 block-5">
+        <div class="info">
+          <h2>Fatality Rate</h2>
+          <h3 class="percentage"><span class="fatality">1.9%</span></h3>
+          <p style="letter-spacing: 0;color: rgb(124, 123, 123);">of total cases</p>
         </div>
-        <div 
-        data-aos="zoom-in" 
-        data-aos-duration="2000" 
-        data-aos-mirror="true" 
-        class="bg2 block-6">
-            <!-- <h4>India Overview</h4>
-            <h2>Confirmed&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspRecovered&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspDeaths</h2>
-            <p style="font-size: 30px ">2,823,191&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp2,084,894&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp53,849</p> -->
-            <p style="margin-bottom: 0px;padding-bottom: 0px">India Overview</p>
-            <h2>
-                <table>
-                    <tr>
-                        <th>Confirmed</th>
-                        <th>Recovered</th>
-                        <th>Death</th>
-                    </tr>
-                    <tr>
-                        <td>2,823,191</td>
-                        <td>2,084,894</td>
-                        <td>53,849</td>
-                    </tr>
-                </table>
-            </h2>
+      </div>
+      <div class="bg2 block-6">
+        <div class="info">
+          <h2>Recovery Rate</h2>
+          <h3 class="percentage"><span class="recovery">74.5%</span></h3>
+          <p style="letter-spacing: 0;color: rgb(124, 123, 123);">of total cases</p>
         </div>
-        <div 
-        data-aos="slide-down" 
-        data-aos-duration="1000" 
-        data-aos-mirror="true" 
-        class="bg1 block-7">
-            <p>Critical Cases treated in ICU</p>
-            <h2> <span>8954</span></h2>
-            
+      </div>
+      <div class="bg2 block-7">
+        <div class="info">
+          <h2>
+            Total Number of Tests
+          </h2>
+          <p><span class="total-tests">35,292,220</span></p>
         </div>
-        <div 
-        data-aos="slide-up" 
-        data-aos-duration="2000" 
-        data-aos-mirror="true" 
-        class="bg1 block-8">
-            <p>Daily Confirmed Cases</p>
-            <h2><span>2052</span></h2>
-            
+      </div>
+      <div class="block-8">
+        <div class="info">
+          <div class="graph">
+          </div>
+          <h3>View Graphs</h3>
         </div>
-        <div 
-        data-aos="slide-left" 
-        data-aos-duration="2000" 
-        data-aos-mirror="true" 
-        class="bg2 block-9">
-            <p>Daily Cases Receiving Treatment</p>
-            <h2><span>685663</span> </h2>
-            
+      </div>
+      <div class="bg2 block-9">
+        <div class="info">
+          <div>
+            <svg class="back-to-home" width="50" height="50">
+              <image href="./resources/svgs/back.svg" height="50" width="50" />
+            </svg>
+          </div>
+          <p>Home Page</p>
         </div>
-        <div 
-        data-aos="slide-right" 
-        data-aos-duration="2000" 
-        data-aos-mirror="true" 
-        class="bg2 block-10">
-            <h2><i class="fas fa-chart-line "></i></h2>
-            <p>Graph</p>
-        </div>
-        <div 
-        data-aos="slide-left" 
-        data-aos-duration="2000" 
-        data-aos-mirror="true" 
-        class="bg2 block-11">
-            <h2>Redirect Link1</h2>
-            <!-- <p>Workout</p> -->
-        </div>
-        <div 
-        data-aos="slide-left" 
-        data-aos-duration="2000" 
-        data-aos-mirror="true" 
-        class="bg2 block-12">
-            <h2>Redirect Link <br><i class="fas fa-home"></i></h2>
-            <!-- <p>Body Hydration</p> -->
-        </div>
+      </div>
     </div>
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="./js/resultPage.js"></script>
-</body>
-
+  </body>
 </html>
