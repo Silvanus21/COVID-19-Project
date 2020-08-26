@@ -7,9 +7,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     }, 700)
 
-
-
-
         includeHTML();
         const videoElement = document.querySelector("#video")
         videoElement.playbackRate = 0.75

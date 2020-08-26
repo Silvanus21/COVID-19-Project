@@ -185,6 +185,10 @@ h1 span {
   margin: 45px 0;
 }
 
+.percentage .percent{
+  font-size: 20px;
+}
+
 .fatality{
   border: 1px solid #FF9AB2;
   padding: 10px;
@@ -229,7 +233,7 @@ h1 span {
   color: #444;
 }
 .total-tests{
-  padding: 5px;
+  padding: 5px 10px;
   border: 1px solid #5ccfa9;
   border-radius: 10px;
   position: relative;
@@ -243,6 +247,8 @@ h1 span {
 }
 /* style for block-8 */
 .block-8 {
+  cursor: context-menu;
+  text-decoration: none;
   position: relative;
   grid-area: block-8;
 }
@@ -271,6 +277,7 @@ h1 span {
 }
 /* style for block-9 */
 .block-9 {
+  text-decoration: none;
   grid-area: block-9;
   color: rgb(124, 123, 123);
   transition: all 0.5s ease;
@@ -283,6 +290,7 @@ h1 span {
   border-radius: 7px;
 }
 .block-9:hover{
+  cursor: context-menu;
   background: rgba(137, 213, 216, 0.781);
   color: #333;
 }

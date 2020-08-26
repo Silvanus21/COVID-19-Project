@@ -274,11 +274,11 @@ select::-webkit-scrollbar {
   background-color: rgb(235, 235, 235);
 }
 
-.home-page-box:nth-child(1) {
+.home-page-box:nth-child(1) , .home-page-box:nth-child(4){
   background-color: #fff5f5;
   color: #e53e3e;
 }
-.home-page-box:nth-child(1) h2 {
+.home-page-box:nth-child(1) h2 , .home-page-box:nth-child(4) h2{
   background-color: #fed7d7;
 }
 .home-page-box:nth-child(2) {
