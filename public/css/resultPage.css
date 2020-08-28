@@ -42,7 +42,7 @@ h2 {
 }
 
 .bg2 {
-  background: #f4f4f4;
+  background: #dbdbdb;
   color: #333;
 }
 
@@ -94,6 +94,8 @@ h1 span {
 }
 /* style for block-3 */
 .block-3 {
+  cursor: context-menu;
+  text-decoration: none;
   grid-area: block-3;
 }
 /* style for block-4 */
@@ -326,6 +328,9 @@ h1 span {
     background-color: #444;
     border: 2px solid #111;
     border-radius: 20px;
+  }
+  .block-5, .block-6{
+    padding-top: 5px;
   }
 }
 

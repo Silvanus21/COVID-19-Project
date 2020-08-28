@@ -9,7 +9,7 @@ function numberWithCommas(x) {
 
 router.get("/", (req, res) => {
 
-  const countryName = req.query.country
+  const countryName = req.session.country
 
   fetch("https://disease.sh/v3/covid-19/all")
     .then((response) => response.json())
@@ -66,8 +66,14 @@ router.get("/", (req, res) => {
     });
 });
 
-router.get("/graphPage", (req, res) => {
-  res.render("graphPage")
+
+router.get("/resultGraph", (req, res) => {
+  res.render("resultGraph")
+})
+
+
+router.get("/countriesOverview", (req, res) => {
+  res.render("countriesOverview")
 })
 
 module.exports = router;

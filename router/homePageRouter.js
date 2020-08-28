@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const fetch = require("node-fetch");
-const url = require("url")
+const url = require("url");
 
 // function to insert commas in long numbers...
 function numberWithCommas(x) {
@@ -14,35 +14,23 @@ router.get("/", (req, res) => {
     .then((data) => {
       let globalTotal = numberWithCommas(data.cases);
       let globalRecovered = numberWithCommas(data.recovered);
-      let globalActive = numberWithCommas(data.active);
+      let globalDeaths = numberWithCommas(data.deaths);
 
-      let indiaTotal;
-      fetch("https://disease.sh/v3/covid-19/countries/india")
-        .then((responseIndia) => responseIndia.json())
-        .then((dataIndia) => {
-          indiaTotal = numberWithCommas(dataIndia.cases);
-
-          res.render("homePage", {
-            globalTotal,
-            globalRecovered,
-            globalActive,
-            indiaTotal,
-          });
-        });
+      res.render("homePage", {
+        globalTotal,
+        globalRecovered,
+        globalDeaths,
+      });
     });
 });
 
 router.post("/", (req, res) => {
-  const countryName = req.body.search;
-
-  res.redirect(
-    url.format({
-      pathname: "/resultPage",
-      query: {
-        country: req.body.search,
-      },
-    })
-  );
+  req.session.country = req.body.search;
+  res.redirect("/resultPage");
 });
+
+router.get("/countriesOverview", (req, res) => {
+  res.render("countriesOverview")
+})
 
 module.exports = router;

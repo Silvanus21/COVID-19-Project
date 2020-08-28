@@ -1,4 +1,18 @@
-<%- include("partials/resultPageHeader") %>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Result Page</title>
+    <!-- font awesome css cdn link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css"
+        integrity="sha256-46r060N2LrChLLb5zowXQ72/iKKNiw/lAmygmHExk/o=" crossorigin="anonymous" />
+    <!-- custom css link -->
+    <link rel="stylesheet" href="/css/resultPage.css" />
+</head>
+
+<body>
 
 <div class="grid-container">
   <div class="bg1 block-1">
@@ -14,12 +28,15 @@
       <p>Total Deaths</p>
     </div>
   </div>
-  <div class="bg1 block-3">
+  <a href="/resultPage/countriesOverview" class="bg1 block-3">
     <div class="info">
-      <h1><i class="fas fa-table"></i></h1>
+      <h1>
+        <i class="fas fa-table"></i>
+        <i class="fas fa-chart-line"></i>
+      </h1>
       <p>Countries Overview</p>
     </div>
-  </div>
+  </a>
   <div class="bg2 block-4">
     <div>
       <h2><%= countryName %> Overview</h2>
@@ -66,14 +83,14 @@
       <p><span class="total-tests"><%= tests %> </span></p>
     </div>
   </div>
-  <a href="resultPage/graphPage" class="bg1 block-8">
+  <a href="resultPage/resultGraph" class="bg1 block-8">
     <div class="info">
       <div class="graph">
       </div>
       <h3>View Graphs</h3>
     </div>
   </a>
-  <a href="/homePage" class="bg2 block-9">
+  <a href="/" class="bg2 block-9">
     <div class="info">
       <div>
         <svg class="back-to-home" width="50" height="50">
@@ -85,4 +102,6 @@
   </a>
 </div>
 
-<%- include("partials/resultPageFooter") %>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+</body>
+</html>

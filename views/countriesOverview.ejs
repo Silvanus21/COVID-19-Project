@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countries Overview</title>
+    <link href="https://unpkg.com/tabulator-tables@4.7.2/dist/css/tabulator.min.css" rel="stylesheet">
+    <!-- tabulator cdn -->
+    <script type="text/javascript" src="https://unpkg.com/tabulator-tables@4.7.2/dist/js/tabulator.min.js"></script>
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/tabulator/4.7.2/css/semantic-ui/tabulator_semantic-ui.min.css">
+    <!-- highcharts cdn -->
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/data.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+    <!-- custom css -->
+    <link rel="stylesheet" href="/css/table.css">
+</head>
+
+<body>
+
+    <div class="big-container">
+        <div class="inner-container">
+            <h2>
+                Tabular Overview of COVID'19 for all Countries
+            </h2>
+            <div class="container">
+                <div id="example-table" class="celled overview-table"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="charts-container">
+        <figure class="table-container">
+            <div id="container-one"></div>
+        </figure>
+
+        <figure class="table-container">
+            <div id="container-two"></div>
+        </figure>
+
+        <figure class="table-container">
+            <div id="container-three"></div>
+        </figure>
+    </div>
+
+    <script src="/js/table.js"></script>
+    <script src="/js/worldTotalChart.js"></script>
+    <script src="/js/worldDeathsChart.js"></script>
+    <script src="/js/worldRecoveredChart.js"></script>
+    <!-- default theme -->
+</body>
+
+</html>

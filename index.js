@@ -4,10 +4,18 @@ const morgan = require("morgan")
 const homePageRouter = require("./router/homePageRouter")
 const resultPageRouter = require("./router/resultPageRouter")
 const contactPageRouter = require("./router/contactPageRouter")
+const session = require("express-session")
 
 const app = express()
 
-// using morgan middleware...
+// setting up session...
+app.use(session({
+    secret : "gameofthronesisbestshowever",
+    resave : true,
+    saveUninitialized : true
+}))
+
+// using morgan middleware for development purpose...
 app.use(morgan("dev"))
 
 // setting viewengine as ejs...
@@ -21,20 +29,14 @@ app.use(express.static(__dirname + "/public"))
 
 // routes...
 
-// starting Page router
-app.get("/", (req, res) => {
-    res.redirect("/homePage")
-})
-
 // homePage route...
-app.use("/homePage", homePageRouter)
+app.use("/", homePageRouter)
 
 // resultPage route...
 app.use("/resultPage", resultPageRouter)
 
 // contactPage route...
 app.use("/contactPage", contactPageRouter)
-
 
 
 // serving the web page...
