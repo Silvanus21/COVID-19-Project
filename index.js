@@ -1,10 +1,10 @@
 const express = require("express")
 const bodyParser = require("body-parser")
-const morgan = require("morgan")
 const homePageRouter = require("./router/homePageRouter")
 const resultPageRouter = require("./router/resultPageRouter")
 const getInTouchRouter = require("./router/getInTouchRouter")
 const session = require("express-session")
+// const morgan = require("morgan")
 
 const app = express()
 
@@ -15,8 +15,8 @@ app.use(session({
     saveUninitialized : true
 }))
 
-// using morgan middleware for development purpose...
-app.use(morgan("dev"))
+// // using morgan middleware for development purpose...
+// app.use(morgan("dev"))
 
 // setting viewengine as ejs...
 app.set("view engine", "ejs")
