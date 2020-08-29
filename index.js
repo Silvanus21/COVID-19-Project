@@ -3,7 +3,7 @@ const bodyParser = require("body-parser")
 const morgan = require("morgan")
 const homePageRouter = require("./router/homePageRouter")
 const resultPageRouter = require("./router/resultPageRouter")
-const contactPageRouter = require("./router/contactPageRouter")
+const getInTouchRouter = require("./router/getInTouchRouter")
 const session = require("express-session")
 
 const app = express()
@@ -36,11 +36,16 @@ app.use("/", homePageRouter)
 app.use("/resultPage", resultPageRouter)
 
 // contactPage route...
-app.use("/contactPage", contactPageRouter)
+app.use("/getInTouch", getInTouchRouter)
+
+// error page...
+app.use((req, res) => {
+    res.render("error")
+} )
 
 
-// serving the web page...
-const port = process.env.PORT || 3000 
+// setting up server....
+const port = process.env.PORT || 3000
 app.listen(port, () => {
-    console.log(`server live at port : ${port}`);
+    console.log(`server live at port: ${port}`);
 })

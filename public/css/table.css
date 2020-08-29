@@ -10,7 +10,7 @@ body {
 }
 
 body {
-  background: #f4f4f4;
+  background: #292828;
   font-family: "open sans", sans-serif;
   margin: 0;
   padding: 0;
@@ -30,6 +30,11 @@ h2 {
   color: rgb(61, 61, 61);
 }
 
+.charts-container h2{
+  color: #d3d3d3;
+  margin-bottom: 0;
+}
+
 .inner-container {
   height: 90%;
   width: 95%;
@@ -40,7 +45,7 @@ h2 {
   justify-content: center;
   align-items: center;
   text-align: center;
-  background-color: #b1b1b1;
+  background-color: #d3d3d3;
 }
 
 .container {
@@ -62,7 +67,7 @@ h2 {
 }
 
 .charts-container {
-  background: #2f2f2f;
+  /* background: #; */
   min-height: 100vh;
   width: 100vw;
   display: flex;
@@ -79,7 +84,7 @@ h2 {
   max-height: 420px;
 }
 
-.table-container:nth-child(3) {
+.table-container:nth-child(4) {
   margin-bottom: 50px;
 }
 

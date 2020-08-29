@@ -23,26 +23,26 @@ document.addEventListener("DOMContentLoaded", () => {
           backgroundColor: {
             linearGradient: [0, 0, 0, 400],
             stops: [
-              [0, "rgb(100, 96, 96)"],
-              [1, "rgb(210,200,216)"],
+              [0, "rgb(240, 235, 235)"],
+              [1, "rgb(211,211,211)"],
             ],
           },
           borderWidth: 0,
-          borderRadius: 0,
+          borderRadius: 10,
           plotBackgroundColor: null,
           plotShadow: false,
           plotBorderWidth: 0,
         },
         title: {
           style: {
-            color: "#F4F4F4",
+            color: "#333",
             font:
               "16px Lucida Grande, Lucida Sans Unicode, Verdana, Arial, Helvetica, sans-serif",
           },
         },
         subtitle: {
           style: {
-            color: "#DDD",
+            color: "#555",
             font:
               "12px Lucida Grande, Lucida Sans Unicode, Verdana, Arial, Helvetica, sans-serif",
           },
@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded", () => {
         yAxis: {
           alternateGridColor: null,
           minorTickInterval: null,
-          gridLineColor: "rgba(255, 255, 255, .15)",
+          gridLineColor: "rgba(0, 0, 0, 0.1)",
           lineWidth: 0,
           tickWidth: 0,
           labels: {
@@ -99,8 +99,8 @@ document.addEventListener("DOMContentLoaded", () => {
           backgroundColor: {
             linearGradient: [0, 0, 0, 50],
             stops: [
-              [0, "rgb(100, 96, 96)"],
-              [1, "rgb(210,200,216)"],
+              [0, "rgb(210,200,216)"],
+              [1, "rgb(190, 196, 196, 0.6)"],
             ],
           },
           borderWidth: 0,

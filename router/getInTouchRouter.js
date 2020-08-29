@@ -34,7 +34,7 @@ const CovidProjectUser = mongoose.model("user", userSchema);
 
 // routes...
 router.get("/", (req, res) => {
-  res.render("contactPage");
+  res.render("getInTouch");
 });
 
 router.post("/", (req, res) => {
@@ -50,7 +50,7 @@ router.post("/", (req, res) => {
       if(error){
           res.send(error)
       }else{
-          res.redirect("/contactPage");
+          res.redirect("/getInTouch");
       }
   })
 
