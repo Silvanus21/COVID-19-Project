@@ -263,7 +263,7 @@ h1 span {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: url("../resources/icons/graph.png");
+  background: url("https://firebasestorage.googleapis.com/v0/b/covid-19-tracker-c20a2.appspot.com/o/graph.png?alt=media&token=f787c006-3364-4e73-a260-e21a1f7718b2");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

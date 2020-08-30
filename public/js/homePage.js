@@ -6,15 +6,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
   includeHTML();
   const videoElement = document.querySelector("#video");
-  videoElement.playbackRate = 0.75;
+  videoElement.playbackRate = 0.8;
 
   const sr = ScrollReveal({ reset: false });
   sr.reveal(".home-box-content", {
     delay: 200,
     origin: "bottom",
-    duration: 600,
+    duration: 800,
     interval: 300,
-    scale: 0,
+    scale: 0.15,
     opacity: 0
   });
   sr.reveal(".img", {
