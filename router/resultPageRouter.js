@@ -68,7 +68,8 @@ router.get("/", (req, res) => {
 
 
 router.get("/resultGraph", (req, res) => {
-  res.render("resultGraph")
+  const countryName = req.session.country
+  res.render("resultGraph", { countryName })
 })
 
 

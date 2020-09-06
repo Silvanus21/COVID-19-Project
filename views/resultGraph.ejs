@@ -1,18 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
+<%- include("partials/resultGraphHeader") %>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>test charts</title>
-    <!-- highcharts cdn -->
-    <link rel="stylesheet" href="/css/resultGraph.css">
-</head>
+<h2> Graphical Overview for <%= countryName %></h2>
 
-<body>
-    <h1 style="text-align: center;">
-    Contents to be added soon...
-    </h1>
-</body>
+<div class="charts-container">
+    <figure class="chart-container">
+        <div id="container-one"></div>
+    </figure>
 
-</html>
+    <figure class="chart-container">
+        <div id="container-two"></div>
+    </figure>
+
+    <figure class="chart-container">
+        <div id="container-three"></div>
+    </figure>
+</div>
+
+<h4>More contents to be added soon...</h4>
+
+<%- include("partials/resultGraphFooter") %>
