@@ -1,44 +1,66 @@
-<script>
- 
-  function selectedCountryMethod() {
-      const selectedCountry = document.getElementById("country")
-      const inputField = document.getElementById("input-field")
-      inputField.value = selectedCountry.value
-    }
+<footer class="footer">
+  <div class="copyright">
+    <p>© 2020 All Rights Reserved</p>
+  </div>
+  <div class="icon-container">
+    <a href="https://github.com/Silvanus21">
+      <i class="fa fa-github" style="font-size: 36px"></i>
+    </a>
+  </div>
+  <div class="tags" id="symbl">
+    <a onclick="moveToTop()" id="HOME">Home</a>
+    <!-- <a href="">About</a> -->
+    <a href="/getInTouch">Contact</a>
+  </div>
+</footer>
 
-    function includeHTML() {
-      var z, i, elmnt, file, xhttp;
-      /* Loop through a collection of all HTML elements: */
-      z = document.getElementsByTagName("*");
-      for (i = 0; i < z.length; i++) {
-        elmnt = z[i];
-        /*search for elements with a certain atrribute:*/
-        file = elmnt.getAttribute("w3-include-html");
-        if (file) {
-          /* Make an HTTP request using the attribute value as the file name: */
-          xhttp = new XMLHttpRequest();
-          xhttp.onreadystatechange = function () {
-            if (this.readyState == 4) {
-              if (this.status == 200) {
-                elmnt.innerHTML = this.responseText;
-              }
-              if (this.status == 404) {
-                elmnt.innerHTML = "Page not found.";
-              }
-              /* Remove the attribute, and call this function once more: */
-              elmnt.removeAttribute("w3-include-html");
-              includeHTML();
+<script>
+
+  function moveToTop() {
+    document.body.scrollTop = 0;  //safari
+    document.documentElement.scrollTop = 0;  //chrome
+  }
+
+  function selectedCountryMethod() {
+    const selectedCountry = document.getElementById("country")
+    const inputField = document.getElementById("input-field")
+    inputField.value = selectedCountry.value
+  }
+
+  function includeHTML() {
+    var z, i, elmnt, file, xhttp;
+    /* Loop through a collection of all HTML elements: */
+    z = document.getElementsByTagName("*");
+    for (i = 0; i < z.length; i++) {
+      elmnt = z[i];
+      /*search for elements with a certain atrribute:*/
+      file = elmnt.getAttribute("w3-include-html");
+      if (file) {
+        /* Make an HTTP request using the attribute value as the file name: */
+        xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function () {
+          if (this.readyState == 4) {
+            if (this.status == 200) {
+              elmnt.innerHTML = this.responseText;
             }
-          };
-          xhttp.open("GET", file, true);
-          xhttp.send();
-          /* Exit the function: */
-          return;
-        }
+            if (this.status == 404) {
+              elmnt.innerHTML = "Page not found.";
+            }
+            /* Remove the attribute, and call this function once more: */
+            elmnt.removeAttribute("w3-include-html");
+            includeHTML();
+          }
+        };
+        xhttp.open("GET", file, true);
+        xhttp.send();
+        /* Exit the function: */
+        return;
       }
     }
-  </script>
-  <!-- Custom javaScript -->
-  <script src="/js/homePage.js"></script>
+  }
+</script>
+<!-- Custom javaScript -->
+<script src="/js/homePage.js"></script>
 </body>
+
 </html>

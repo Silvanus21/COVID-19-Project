@@ -69,7 +69,7 @@ body::-webkit-scrollbar-thumb {
   padding: 15px;
   border: 1px solid #c1c1c1;
   border-radius: 5px;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
   background-color: #eaeaea;
   max-width: 600px;
 }
@@ -123,6 +123,28 @@ textarea {
 .submit-btn:focus {
   outline: none;
 }
+
+/* home button styles.. */
+
+.home-btn{
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  color: rgb(170, 168, 168);
+  padding: 5px 15px;
+  outline: none;
+  background: transparent;
+  border: 1px solid rgb(170, 168, 168);
+  transition: all 0.4s ease;
+}
+
+.home-btn:hover{
+  color: aliceblue;
+  background-color: aliceblue;
+  color: #222;
+}
+
+/* media queries... */
 
 @media screen and (max-width: 1200px) {
   .main-container {

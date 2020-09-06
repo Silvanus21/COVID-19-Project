@@ -108,6 +108,70 @@ h2 {
   border: 2px solid #222121;
 }
 
+/* footer section css */
+
+footer {
+  background-color: #111;
+  padding: 25px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+footer a {
+  text-decoration: none;
+  color: #7b7b83;
+  margin: 0 13px;
+  transition: color 0.7s ease;
+}
+
+footer a:hover {
+  color: aliceblue;
+}
+
+.fa-github {
+  margin: 10px 0;
+}
+
+@keyframes rot-animation {
+  0% {
+    transform: rotate(0deg);
+    transform: scale(1);
+  }
+  25% {
+    transform: rotate(10deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(-10deg);
+  }
+  100% {
+    transform: rotate(0deg);
+    transform: scale(1.1);
+  }
+}
+
+.fa-github:hover {
+  cursor: auto;
+  animation: rot-animation 0.4s linear forwards;
+  color: aliceblue;
+}
+
+.copyright {
+  color: #7b7b83;
+}
+.fa {
+  color: #7b7b83;
+}
+.tags {
+  margin: 10px 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+/* media queries.... */
+
 @media screen and (max-width: 1000px) {
   .chart-container {
     width: 90%;
@@ -116,6 +180,15 @@ h2 {
     max-height: 400px;
   }
 }
+
+
+@media screen and (max-width: 685px){
+  footer {
+    flex-direction: column;
+    align-content: space-around;
+  }
+}
+
 
 @media screen and (max-width: 620px) {
   .chart-container {
