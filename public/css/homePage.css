@@ -368,6 +368,10 @@ select::-webkit-scrollbar {
 
 /* footer section styles */
 
+#HOME{
+  cursor: pointer;
+}
+
 footer {
   background-color: #111;
   padding: 25px;
