@@ -1,22 +1,39 @@
 <footer class="footer">
-    <div class="copyright">
-      <p>© 2020 All Rights Reserved</p>
-    </div>
-    <div class="icon-container">
-      <a href="https://github.com/Silvanus21">
-        <i class="fa fa-github" style="font-size: 36px"></i>
-      </a>
-    </div>
-    <div class="tags" id="symbl">
-      <a href="/resultPage">Go back</a>
-      <a href="/">Home</a>
-      <a href="/getInTouch">Contact</a>
-    </div>
+  <div class="copyright">
+    <p>© 2020 All Rights Reserved</p>
+  </div>
+  <div class="icon-container">
+    <a href="https://github.com/Silvanus21">
+      <i class="fa fa-github" style="font-size: 36px"></i>
+    </a>
+  </div>
+  <div class="tags" id="symbl">
+    <a href="/resultPage">Go back</a>
+    <a href="/">Home</a>
+    <a href="/getInTouch">Contact</a>
+  </div>
 </footer>
+
+<div class="loader-wrapper" id="loader-wrapper">
+  <span class="loader">
+    <span class="loader-inner"></span>
+  </span>
+</div>
 
 <%- include("countryTotalChart") %>
 <%- include("countryRecoveredChart") %>
 <%- include("countryDeathsChart") %>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    setTimeout(() => {
+      const lw = document.getElementById("loader-wrapper")
+      lw.style.opacity = 0
+      setTimeout(() => {
+        lw.style.display = "none";
+      }, 2000)
+    }, 1500)
+  })
+</script>
 </body>
 
 </html>

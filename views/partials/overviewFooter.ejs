@@ -14,11 +14,27 @@
     </div>
 </footer>
 
+<div class="loader-wrapper" id="loader-wrapper">
+  <span class="loader">
+    <span class="loader-inner"></span>
+  </span>
+</div>
+
 <script src="/js/table.js"></script>
 <script src="/js/worldTotalChart.js"></script>
 <script src="/js/worldDeathsChart.js"></script>
 <script src="/js/worldRecoveredChart.js"></script>
-<!-- default theme -->
+<script>
+  document.addEventListener("DOMContentLoaded", () =>{
+    setTimeout(() => {
+      const lw = document.getElementById("loader-wrapper")
+      lw.style.opacity = 0
+      setTimeout(() => {
+        lw.style.display = "none";
+      }, 2000)
+    }, 1500)
+  })
+</script>
 </body>
 
 </html>
