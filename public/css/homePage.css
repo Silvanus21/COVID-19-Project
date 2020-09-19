@@ -327,7 +327,7 @@ select::-webkit-scrollbar {
 
 /* style for block-1 */
 .block-1 {
-  background: url("./1.jpg");
+  background: url("https://firebasestorage.googleapis.com/v0/b/covid-19-tracker-c20a2.appspot.com/o/Webp.net-resizeimage.webp?alt=media&token=c7ab8f71-1101-435b-9c95-eb98d5015617");
   background-position: bottom;
   background-size: cover;
   background-repeat: no-repeat;
@@ -370,7 +370,7 @@ select::-webkit-scrollbar {
   cursor: pointer;
   text-decoration: none;
   transition: all 0.5s ease;
-  background: url("./1.jpg");
+  background: url("https://firebasestorage.googleapis.com/v0/b/covid-19-tracker-c20a2.appspot.com/o/Webp.net-resizeimage.webp?alt=media&token=c7ab8f71-1101-435b-9c95-eb98d5015617");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
