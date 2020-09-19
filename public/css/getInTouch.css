@@ -8,9 +8,7 @@ html,
 body {
   font-family: "open sans", sans-serif;
   height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  width: 100vw;
   margin: 0;
   user-select: none;
   background-color: #333;
@@ -23,10 +21,28 @@ body {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+
+  display: grid;
+  grid-template-areas: "first-box second-box";
+  grid-template-rows: 100vh;
 }
 
 html {
   scroll-behavior: smooth;
+}
+
+.first-box{
+  grid-area: first-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.second-box{
+  grid-area: second-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 h3{
@@ -39,7 +55,7 @@ h3{
 
 .main-container {
   margin: 0 auto;
-  width: 1150px;
+  padding: 10px;
 }
 
 label,
@@ -135,14 +151,40 @@ textarea {
 
 /* home button styles.. */
 
+.contact-text{
+  text-align: center;
+  color: #d3d1d1;
+  max-width: 400px;
+  margin: 30px 0;
+}
+
+.contact-text:nth-child(n+2){
+  margin: 10px;
+}
+
+.contact-text:nth-child(3){
+  font-size: 40px;
+}
+
+.contact-text a{
+  margin: 0 10px;
+  color: #d3d1d1;
+  text-decoration: none;
+  transition: all .4s ease;
+}
+
+.contact-text a:hover{
+  font-size: 45px;
+}
+
 .home-btn{
-  border-radius: 5px;
+  margin: 20px 0 0;
   display: inline-block;
   text-align: center;
   letter-spacing: 1px;
   text-decoration: none;
   color: rgb(170, 168, 168);
-  padding: 5px 10px;
+  padding: 10px 10px;
   outline: none;
   background: transparent;
   border: 1px solid rgb(170, 168, 168);
@@ -150,9 +192,9 @@ textarea {
 }
 
 .home-btn:hover{
+  border: 1px solid #222;
   color: aliceblue;
-  background-color: aliceblue;
-  color: rgb(36, 3, 3);
+  background-color: #222;
 }
 
 /* media queries... */
@@ -163,6 +205,17 @@ textarea {
   }
 }
 
+@media screen and (max-width: 1085px) {
+  body{
+    grid-template-areas: 
+    "first-box"
+    "second-box";
+    grid-template-rows: auto;
+  }
+  .home-btn{
+    margin-bottom: 40px;
+  }
+}
 
 @media screen and (max-width: 800px) {
   .contact-form{

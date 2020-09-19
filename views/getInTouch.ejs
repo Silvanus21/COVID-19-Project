@@ -5,30 +5,50 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Get In Touch</title>
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/589c2a6ba2.js" crossorigin="anonymous"></script>
+    <!-- custom css -->
     <link rel="stylesheet" href="/css/getInTouch-min.css" />
 </head>
 
 <body>
+    <div class="first-box">
+        <div class="main-container">
+            <h3 style="text-align: center;color: #f4f4f4;">Get in touch</h3>
+            <form action="/contactPage" class="contact-form" method="POST">
+                <label for="name">Name</label>
+                <input autocomplete="off" type="text" class="input-field contact-scrollreveal" name="name" />
 
-    <div class="main-container">
-        <h3 style="text-align: center;color: #f4f4f4;">Get in touch</h3>
-        <form action="/contactPage" class="contact-form" method="POST">
-            <label for="name">Name</label>
-            <input autocomplete="off" type="text" class="input-field contact-scrollreveal" name="name" />
+                <label for="name">Subject</label>
+                <input autocomplete="off" type="text" class="input-field contact-scrollreveal" name="subject" />
 
-            <label for="name">Subject</label>
-            <input autocomplete="off" type="text" class="input-field contact-scrollreveal" name="subject" />
+                <label for="name">Email</label>
+                <input autocomplete="off" type="text" class="input-field contact-scrollreveal" name="email" />
 
-            <label for="name">Email</label>
-            <input autocomplete="off" type="text" class="input-field contact-scrollreveal" name="email" />
+                <label htmlFor="message">Message</label>
+                <textarea class="input-field contact-scrollreveal" name="message" id="" cols="0" rows="7"></textarea>
 
-            <label htmlFor="message">Message</label>
-            <textarea class="input-field contact-scrollreveal" name="message" id="" cols="0" rows="7"></textarea>
-
-            <input type="submit" class="submit-btn" value="SEND" />
-        </form>
+                <input type="submit" class="submit-btn" value="SEND" />
+            </form>
+        </div>
+    </div>
+    <div class="second-box">
+        <div class="contact-text">
+            Hi, thanks for stopping by today! Would you please take a moment to give some feedbacks or you can suggest any improvements for the website.
+        </div>
+        <div class="contact-text">
+            Find me on Github / Linkedin
+        </div>
+        <div class="contact-text">
+            <a href="https://github.com/Silvanus21">
+                <i class="fab fa-github-square"></i>
+            </a>
+            <a href="https://linkedin.com/in/silvanus21">
+                <i class="fab fa-linkedin"></i>
+            </a>
+        </div>
         <div style="text-align: center;">
-            <a class="home-btn" href="/"> Back to Home Page </a>
+            <a class="home-btn" href="/"> Back to Home</a>
         </div>
     </div>
 
